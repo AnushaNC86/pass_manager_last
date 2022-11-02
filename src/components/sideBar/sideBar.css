@@ -1,0 +1,50 @@
+.sideBarContainer {
+    background: var(--sideBarColor);
+    position: fixed;
+    width: 8rem;
+    height: 100%;
+    top: 0;
+
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sideBarContents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    padding-top: 3rem;
+}
+
+.burger {
+    height: 22px;
+    width: 40px;
+}
+
+.activeTab {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--activecolor);
+    border-radius: 50%;
+    top: 15rem;
+    left: 7.5rem;
+}
+
+.home {
+    display: flex;
+    border-left: 4px solid var(--activecolor);
+    border-radius: 5px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+/* 
+.dashboard {
+    margin: 0
+    
+} */

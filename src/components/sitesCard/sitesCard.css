@@ -1,0 +1,64 @@
+.sitesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 23px;
+  margin-top: 5rem;
+}
+
+.sitesContents {
+  width: 343px;
+  background-color: #f5f7fb;
+  border-radius: 1em;
+  padding: 12px 20px;
+}
+
+.cardImg {
+  background-position: "cover";
+  border-radius: "50%";
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.siteLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c4857;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-align: center;
+}
+
+.copyTitle {
+  color: #0e85ff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px;
+  padding-bottom: 6px;
+}
+
+.cardCopy {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.copyPass {
+  color: var(--sideBarColor);
+  font-size: 12.6px;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+.fbImg {
+  background-position: cover;
+  border-radius: 50%;
+  height: 50px;
+}

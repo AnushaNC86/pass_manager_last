@@ -1,0 +1,263 @@
+.homeBodyContiner {
+  position: relative;
+  margin-top: 3rem;
+  margin-left: 11rem;
+}
+.arrow {
+  display: none;
+}
+
+.homebodyHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sitesMedia {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.socialMediaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+
+.socialMediaHead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 22px;
+  gap: 0.5rem;
+}
+
+.socialMediaCount {
+  background-color: var(--sideBarColor);
+  border-radius: 50%;
+  height: 37px;
+  width: 37px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px;
+}
+
+.cross {
+  transform: rotate(45deg);
+}
+
+.searchContainer {
+  display: flex;
+
+  gap: 27px;
+}
+
+.search {
+  border: none;
+  outline: none;
+  width: 17rem;
+  border-bottom: 1px solid var(--sideBarColor);
+  color: #a5a5a5;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+  padding: 7px;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 0.5rem;
+  right: 4.5rem;
+}
+
+.Sites {
+  color: #3c4857;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 41px;
+  border-bottom: 3px solid var(--activecolor);
+  border-radius: 3px;
+  width: 3rem;
+}
+
+.socialMedia {
+  color: #3c4857;
+  font-family: "Open Sans";
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 33px;
+}
+
+.addNewDataContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13.5rem 3rem;
+  color: #3c4857;
+  font-size: 21px;
+  letter-spacing: 0;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.addSite {
+  background: #a5a5a5;
+  padding: 3rem;
+  border-radius: 5%;
+}
+
+.addNew {
+  color: #3c4857;
+
+  font-size: 26px;
+  letter-spacing: 0;
+  line-height: 36px;
+  text-align: center;
+}
+
+.addNewDataContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sitesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 23px;
+  margin-top: 5rem;
+}
+
+.sitesContents {
+  width: 343px;
+  background-color: #d6c2c2;
+  border-radius: 1em;
+  padding: 12px 20px;
+}
+
+.cardImg {
+  background-position: "cover";
+  border-radius: "50%";
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.siteLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3c4857;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-align: center;
+}
+
+.copyTitle {
+  color: #0e85ff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 27px;
+  padding-bottom: 6px;
+}
+
+.cardCopy {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.copyPass {
+  color: var(--sideBarColor);
+  font-size: 12.6px;
+  letter-spacing: 0;
+  line-height: 17px;
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.btn-modal {
+  padding: 10px 20px;
+  display: block;
+  margin: 100px auto 0;
+  font-size: 18px;
+}
+
+/*  */
+
+.sitesMobile {
+  display: none;
+}
+
+.addModalMobile {
+  display: none;
+}
+
+.modal1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+  top: -4rem;
+  left: -4rem;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100vh;
+}
+
+.modalContent {
+  background-color: white;
+  /* left: 41px; */
+  /* right: 1px; */
+  /* margin: 1rem 8rem; */
+  padding: 2rem;
+  border-radius: 10px;
+  z-index: 3;
+  position: relative;
+}
+
+.modelInfo {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-modal {
+  position: absolute;
+  top: -23px;
+  right: -31px;
+  background: transparent;
+  border: transparent;
+  /* width: 4px; */
+}
+
+.closeImg {
+  width: 3rem;
+}

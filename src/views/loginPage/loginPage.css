@@ -1,0 +1,106 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loginPageContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 15px;
+  background: var(--backgroundBlue);
+  box-shadow: 0 8px 18px 10px rgba(0, 0, 0, 0.02);
+}
+
+.logo {
+  display: flex;
+  flex-basis: 30%;
+  border-right: 2px solid #f5f7fb16;
+}
+
+.signupForm {
+  display: flex;
+  flex-basis: 78%;
+  padding: 3rem 6rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .loginPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: var(--backgroundBlue);
+  }
+
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 2rem 6rem 3rem;
+  }
+
+  .logoConatiner {
+    display: flex;
+    padding: 0px;
+    height: 100%;
+    flex-direction: column;
+    gap: 34%;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .logoMob {
+    display: block;
+  }
+
+  .logo {
+    border: none;
+    border-bottom: 2px solid #f5f7fb16;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .logoWeb {
+    display: none;
+  }
+
+  .signupForm {
+    padding: 0px;
+  }
+
+  .signIn {
+    min-width: 20rem;
+    padding-top: 22px;
+  }
+
+  .logoText {
+    display: none;
+  }
+
+  .signInUpTabs {
+    display: flex;
+    justify-content: space-between;
+    width: 269px;
+  }
+
+  .signInHead {
+    display: none;
+  }
+}

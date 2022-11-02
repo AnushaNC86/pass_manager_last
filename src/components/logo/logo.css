@@ -1,0 +1,38 @@
+.logoConatiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem 6rem 3rem;
+}
+
+.logoWeb {
+    margin-bottom: 2rem;
+}
+
+.logoMob {
+    display: none;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 27px;
+    text-align: center;
+    width: 281px;
+    color: #FFFFFF;
+}
+
+.signInUpTabs {
+    display: none;
+}
+
+.signInTab {
+    border-bottom: 3px solid orange;
+}
+
+.linkTab {
+    text-decoration: none;
+    color: #FFFFFF;
+}

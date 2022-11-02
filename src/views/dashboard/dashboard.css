@@ -1,0 +1,229 @@
+.dashboard {
+  margin: 0 12%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .dashboard {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 895px) {
+}
+
+@media only screen and (max-width: 580px) {
+}
+
+@media only screen and (max-width: 580px) {
+  .topbarContents {
+    display: none;
+  }
+
+  .topBarContainer {
+    position: fixed;
+    background-color: var(--sideBarColor);
+    margin: 0;
+    padding-top: 1.5rem;
+    height: 80px;
+  }
+
+  .sideBar {
+    display: none;
+  }
+
+  .homeBodyContiner {
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+
+  .sitesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+    padding-top: 5rem;
+  }
+
+  .cross {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1;
+  }
+
+  .topBarMobile {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .topBarLeft,
+  .topBarRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .searchBar {
+    display: none;
+  }
+
+  .socialMediaHead {
+    position: fixed;
+    top: 7rem;
+    right: 1rem;
+    z-index: 1;
+  }
+
+  .socialMedia {
+    font-size: 19.2px;
+  }
+
+  .socialMediaCount {
+    width: 32px;
+  }
+
+  .sitesMedia,
+  .socialMediaHead {
+    display: none;
+  }
+
+  .sitesMobile {
+    position: fixed;
+    right: 0;
+    top: 5rem;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    padding: 2rem;
+  }
+
+  .socialMediaHead1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .addModalMobile {
+    display: block;
+  }
+
+  .inputFiledItemss {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .modalContent {
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+    z-index: 3;
+    position: fixed;
+    bottom: 0;
+  }
+
+  .firstLine {
+    flex-direction: column;
+  }
+
+  .modalButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .wrapContainer {
+    justify-content: center;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .addSiteModal {
+    display: flex;
+    align-items: center;
+    background: var(--sideBarColor);
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 41px;
+  }
+  .modalForm {
+    margin-top: 4rem;
+  }
+  .arrow {
+    outline: none;
+    border: none;
+    background: none;
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+  }
+  .closeImg {
+    display: none;
+  }
+  .addSiteHead {
+    position: absolute;
+    left: 4rem;
+  }
+  .arrowImg {
+    height: 16px;
+    width: 16px;
+  }
+  .editBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
+    outline: none;
+    border: none;
+    height: 45px;
+    width: 80px;
+    border-radius: 4px;
+    background-color: var(--sideBarColor);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+  .btnUpdate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    padding: 1.8rem;
+    bottom: 0;
+    border-radius: 0px;
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 28px;
+
+    background-color: #0e85ff;
+  }
+}

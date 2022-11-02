@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --backgroundBlue: linear-gradient(180deg, #20bbff 0%, #0e85ff 100%);
+  --sideBarColor: #2892ff;
+  --activecolor: #ffa136;
+  --color: #2892ff;
+  --successGreen: #cbf3dc;
+  --successGreenBorder: #97e6b8;
+  --successGreenFont: #2ecc71;
+}
+
+.App {
+  min-height: 100vh;
+}
