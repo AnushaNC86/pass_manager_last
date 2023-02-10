@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "../modal/modal.css";
-import "./modalEdit.css"
+import "./modalEdit.css";
 
-const ModalEdit = (props: any) => {
+const ModalEdit = (props) => {
   const [value, setValue] = useState({
     url: "",
     siteName: "",
@@ -15,14 +15,13 @@ const ModalEdit = (props: any) => {
   const [pass, setPass] = useState(false);
 
   const togglePass = () => {
-    setPass(!pass)
-  }
-
+    setPass(!pass);
+  };
 
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
   const editData = JSON.parse(localStorage.getItem(currentUser) || "[]");
 
-  const modalHandler = (event: any, i: number) => {
+  const modalHandler = (event, i) => {
     event.preventDefault();
     const url = event.target.url.value;
     const siteName = event.target.siteName.value;
@@ -44,13 +43,12 @@ const ModalEdit = (props: any) => {
     window.location.reload();
   };
 
-  const editHandler = (e: any) => {
+  const editHandler = (e) => {
     setValue(e.target.value);
   };
   return (
     <div>
       <div className="modalItem">
-
         <div className="dashBoardForm">
           <form
             action=""
@@ -58,13 +56,20 @@ const ModalEdit = (props: any) => {
             onSubmit={(e) => modalHandler(e, props.index)}
           >
             <div className="modalBtn">
-              <div className="addSiteModal"><div className="addSiteHead">{!edit ? "Site Details" : "Edit"}</div></div>
+              <div className="addSiteModal">
+                <div className="addSiteHead">
+                  {!edit ? "Site Details" : "Edit"}
+                </div>
+              </div>
               <div className="modalButton">
-
                 {props.edit1 ? (
                   <div>
                     {!edit ? (
-                      <button type="button" onClick={() => setEdit(true)} className="editBtn">
+                      <button
+                        type="button"
+                        onClick={() => setEdit(true)}
+                        className="editBtn"
+                      >
                         Edit
                       </button>
                     ) : (
@@ -74,9 +79,8 @@ const ModalEdit = (props: any) => {
                 ) : (
                   ""
                 )}
-
-
-              </div></div>
+              </div>
+            </div>
 
             <div className="url">
               <div className="classLabel">URL</div>
@@ -157,11 +161,11 @@ const ModalEdit = (props: any) => {
               />
             </div>
 
-
             <div className="modalButton">
-
               {edit ? (
-                <button type="submit" className="btnUpdate">Update</button>
+                <button type="submit" className="btnUpdate">
+                  Update
+                </button>
               ) : (
                 ""
               )}

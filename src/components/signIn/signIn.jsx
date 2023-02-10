@@ -11,7 +11,7 @@ const SignIn = () => {
     setPassword(!password);
   };
 
-  const onsubmitHandler = (e: any) => {
+  const onsubmitHandler = (e) => {
     e.preventDefault();
     const mobile = e.target.mobileNo.value;
     const mPin = e.target.mPin.value;
@@ -22,7 +22,7 @@ const SignIn = () => {
     const storedData = JSON.parse(localStorage.getItem("users") || "[]");
     console.log("storedData", storedData);
     if (loginData.mobile !== "" && loginData.mPin !== "") {
-      storedData.map((user: any) => {
+      storedData.map((user) => {
         if (user.mobile === loginData.mobile) {
           if (user.mPin === loginData.mPin) {
             localStorage.setItem("currentUser", JSON.stringify(mobile));
@@ -34,7 +34,6 @@ const SignIn = () => {
             alert("enter valid credentials");
           }
         }
-
       });
     } else {
       alert("enter all fileds");
@@ -48,7 +47,7 @@ const SignIn = () => {
   //   localStorage.setItem("users", JSON.stringify([]));
   // }
 
-  // const submitHandler = (e: any) => {
+  // const submitHandler = (e) => {
   //   e.preventDefault();
 
   //   const userName = e.target.mobileNo.value;
@@ -75,7 +74,6 @@ const SignIn = () => {
               maxLength={10}
               minLength={10}
             />
-
           </div>
           <div className="txtField">
             <input
@@ -83,7 +81,6 @@ const SignIn = () => {
               className="mPin"
               placeholder="Enter Mpin"
               name="mPin"
-
               maxLength={4}
               minLength={4}
             />

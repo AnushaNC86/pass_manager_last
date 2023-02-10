@@ -17,7 +17,7 @@ const SignUp = () => {
     localStorage.setItem("users", JSON.stringify([]));
   }
 
-  const submitHandler = (e: any) => {
+  const submitHandler = (e) => {
     e.preventDefault();
 
     const mobile = e.target.mobileNo.value;
@@ -30,8 +30,8 @@ const SignUp = () => {
     const enteredData = JSON.parse(localStorage.getItem("users") || "[]");
     console.log("entered", enteredData);
 
-    const newArr: any[] = [];
-    enteredData.map((user: any) => {
+    const newArr = [];
+    enteredData.map((user) => {
       if (user.mobile === userValues.mobile) {
         newArr.push("exists");
       }
@@ -67,7 +67,7 @@ const SignUp = () => {
   //   localStorage.setItem("users", JSON.stringify([]));
   // }
 
-  // const submitHandler = (e: any) => {
+  // const submitHandler = (e) => {
   //   e.preventDefault();
 
   //   const userName = e.target.mobileNo.value;
@@ -77,8 +77,8 @@ const SignUp = () => {
   //   const userValues = { userName, mPin, cmPin };
   //   console.log("userValues", userValues);
   //   const enteredData = JSON.parse(localStorage.getItem("users") || "[]");
-  //   const newarr: any[] = [];
-  //   enteredData.map((user: any) => {
+  //   const newarr[] = [];
+  //   enteredData.map((user) => {
   //     if (user.userName === userValues.userName) {
   //       newarr.push("exists");
   //     }

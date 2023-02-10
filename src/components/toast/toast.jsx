@@ -1,8 +1,6 @@
-import "./toast.css"
-type toastProps = {
-  message: string;
-};
-const Toast = (props: toastProps) => {
+import "./toast.css";
+
+const Toast = (props) => {
   return (
     <div className="toastBar">
       <div className="toastMsg">{props.message}</div>

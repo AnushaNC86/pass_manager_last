@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 import "./modal.css";
 
 const Modal = () => {
   const [pass, setPass] = useState(false);
 
   const togglePass = () => {
-    setPass(!pass)
-  }
+    setPass(!pass);
+  };
 
-  const modalHandler = (event: any) => {
+  const modalHandler = (event) => {
     event.preventDefault();
     const url = event.target.url.value;
     const siteName = event.target.siteName.value;
@@ -25,49 +25,67 @@ const Modal = () => {
       sitePassword,
       notes,
     };
-    if (modalData.url !== "" &&
+    if (
+      modalData.url !== "" &&
       modalData.siteName !== "" &&
       modalData.folder !== "" &&
       modalData.userName !== "" &&
       modalData.sitePassword !== "" &&
-      modalData.notes !== "") {
-      const currentUser = JSON.parse(localStorage.getItem("currentUser") || "[]");
+      modalData.notes !== ""
+    ) {
+      const currentUser = JSON.parse(
+        localStorage.getItem("currentUser") || "[]"
+      );
       const oldData = JSON.parse(localStorage.getItem(currentUser) || "[]");
       oldData.push(modalData);
       localStorage.setItem(currentUser, JSON.stringify(oldData));
       sessionStorage.setItem("modalSuccess", "true");
-      window.location.reload()
+      window.location.reload();
+    } else {
+      alert("enter all fields");
     }
-    else {
-      alert("enter all fields")
-    }
-
   };
   return (
     <div>
       <div className="modalItem">
-        <div className="addSiteModal"><div className="addSiteHead">Add Site</div></div>
+        <div className="addSiteModal">
+          <div className="addSiteHead">Add Site</div>
+        </div>
         <div className="dashBoardForm">
           <form action="" className="modalForm" onSubmit={modalHandler}>
             <div className="url">
               <div className="classLabel">URL</div>
-              <input type="text" className="inputStyle" name="url" />
+              <input
+                type="text"
+                className="inputStyle"
+                name="url"
+                data-cy="url-input"
+              />
             </div>
 
             <div className="firstLine">
               <div className="siteName">
                 <div className="classLabel">Site Name</div>
-                <input type="text" className="inputStyle" name="siteName" />
+                <input
+                  type="text"
+                  className="inputStyle"
+                  name="siteName"
+                  data-cy="siteName-input"
+                />
               </div>
 
               <div className="selectFolder">
                 <div className="classLabel">Sector/Folder</div>
-                <input type="text" className="inputStyle" name="folder" />
+                <input
+                  type="text"
+                  className="inputStyle"
+                  name="folder"
+                  data-cy="folder-input"
+                />
                 <img
                   src={require("../../assets/icons/drop_down.png")}
                   alt="drop down"
                   className="dropDown"
-
                 />
               </div>
             </div>
@@ -75,13 +93,22 @@ const Modal = () => {
             <div className="firstLine">
               <div className="userName">
                 <div className="classLabel">User Name</div>
-                <input type="text" className="inputStyle" name="userName" />
+                <input
+                  type="text"
+                  className="inputStyle"
+                  name="userName"
+                  data-cy="username-input"
+                />
               </div>
 
               <div className="sitePassword">
-                <div className="classLabel">
-                  Site Password</div>
-                <input type={pass ? "text" : "password"} className="inputStyle" name="sitePassword" />
+                <div className="classLabel">Site Password</div>
+                <input
+                  type={pass ? "text" : "password"}
+                  className="inputStyle"
+                  name="sitePassword"
+                  data-cy="sitepass-input"
+                />
                 <img
                   src={require("../../assets/icons/eye_modal.png")}
                   alt="eye"
@@ -93,14 +120,22 @@ const Modal = () => {
 
             <div className="textArea">
               <div className="classLabel">Notes</div>
-              <textarea className="inputStyle" name="notes" />
+              <textarea
+                className="inputStyle"
+                name="notes"
+                data-cy="notes-input"
+              />
             </div>
 
             <div className="modalButton">
               <button className="modalButtons resetBtn" type="reset">
                 Reset
               </button>
-              <button className="modalButtons saveBtn" type="submit">
+              <button
+                className="modalButtons saveBtn"
+                type="submit"
+                data-cy="submit-button"
+              >
                 Save
               </button>
             </div>

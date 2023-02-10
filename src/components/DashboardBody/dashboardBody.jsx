@@ -22,12 +22,12 @@ const DashBoardBody = () => {
   const openModalEdit = () => {
     setEdit(!edit);
   };
-  const getSearch = (e: any) => {
+  const getSearch = (e) => {
     setSearch(e.target.value);
     console.log("search term", search);
   };
 
-  const childToParent = (data: any, i: number) => {
+  const childToParent = (data, i) => {
     setEdit(data);
     setModalEdit(i);
   };
@@ -37,7 +37,9 @@ const DashBoardBody = () => {
       <div className="homebodyHead">
         <div className="sitesMedia">
           <div className="socialMediaContainer">
-            <div className="Sites">Sites</div>
+            <div className="Sites" data-cy="site-head">
+              Sites
+            </div>
           </div>
           <div className="searchContainer">
             <div className="searchBar">
@@ -45,7 +47,7 @@ const DashBoardBody = () => {
                 type="text"
                 className="search"
                 name="search"
-                placeholder="Search here"
+                placeholder="Search Here"
                 onChange={getSearch}
               />
               <img
@@ -54,7 +56,7 @@ const DashBoardBody = () => {
                 className="searchIcon"
               />
             </div>
-            <div className="addModal">
+            <div className="addModal" data-cy="add-site-modal">
               <img
                 src={require("../../assets/icons/close_btn.png")}
                 alt=""
@@ -98,11 +100,61 @@ const DashBoardBody = () => {
             </div>
           </div>
           <div className="addSiteContainer">
-            <SitesCard
-              siteData={siteData}
-              search={search}
-              childToParent={childToParent}
-            />
+            <div className="sitesContainer">
+              {siteData
+                .filter((ele) => {
+                  return search.toLowerCase() === ""
+                    ? ele
+                    : ele.siteName.toLowerCase().includes(search.toLowerCase());
+                })
+                .map((ele, i) => {
+                  return (
+                    <div key={i} className="sitesContents">
+                      <div className="cardHead">
+                        <div className="cardLogo">
+                          {ele.icon !== "" ? (
+                            <img
+                              src={require("../../assets/icons/Facebook.png")}
+                              className="fbImg"
+                              onClick={() => {
+                                childToParent(true, i);
+                              }}
+                            />
+                          ) : (
+                            <img src={ele.icon} alt="" />
+                          )}
+                        </div>
+
+                        <div>
+                          <div className="copyTitle"> {ele.siteName}</div>
+                          <div
+                            className="cardCopy"
+                            style={{ cursor: "pointer" }}
+                          >
+                            <img
+                              src={require("../../assets/icons/copy.png")}
+                              alt="copy"
+                              onClick={() => {
+                                navigator.clipboard.writeText(ele.sitePassword);
+                              }}
+                            />
+                            <div
+                              className="copyPass"
+                              data-cy="copy-password"
+                              onClick={() => {
+                                navigator.clipboard.writeText(ele.sitePassword);
+                              }}
+                            >
+                              Copy Password
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="siteLink">{ele.url}</div>
+                    </div>
+                  );
+                })}
+            </div>
             <div className="addModalMobile">
               <img
                 src={require("../../assets/icons/close_btn.png")}
@@ -131,15 +183,16 @@ const DashBoardBody = () => {
                       }}
                     />
                   </button>
-                  <button className="arrow"
-                  ><img
+                  <button className="arrow">
+                    <img
                       src={require("../../assets/icons/aerrow.png")}
                       alt="drop"
                       className="arrowImg"
                       onClick={() => {
                         setModal(false);
                       }}
-                    /></button>
+                    />
+                  </button>
                 </div>
               </div>
             </div>
@@ -157,16 +210,16 @@ const DashBoardBody = () => {
                     edit1={edit}
                     setEdit1={setEdit}
                   />
-                  <button className="arrow"
-                  ><img
+                  <button className="arrow">
+                    <img
                       src={require("../../assets/icons/aerrow.png")}
                       alt="drop"
                       className="arrowImg"
                       onClick={() => {
                         setEdit(false);
                       }}
-                    /></button>
-
+                    />
+                  </button>
                 </div>
               </div>
             </div>
